@@ -11,11 +11,10 @@
             <h5 class="card-title">{{ tarefa.titulo }}</h5>
             <p class="card-text">{{ tarefa.descricao }}</p>
             <p class="card-date">{{ tarefa.data_expiracao }}</p>
-            <hr>
-            <a href="{% url 'editar_tarefas' tarefa.id %}">Alterar Tarefa</a>
-            <a href="{% url 'remover_tarefas' tarefa.id %}">Remover Tarefa</a>
+            <a href="{% url 'editar_tarefas' tarefa.id %}"><input type="button" class="btn btn-warning" value="Alterar Tarefa">
+            <a href="{% url 'remover_tarefas' tarefa.id %}"><input type="button" class="btn btn-danger" value="Remover Tarefa">
         </div>
     </div>
 {% endfor %}
-<a href = "{% url 'cadastrar_tarefas' %}"><input type="button" class="btn btn-primary mb-3" value="Cadastrar Tarefa">
+<a href = "{% url 'cadastrar_tarefas' %}"><input type="button" class="btn btn-success" value="Cadastrar Tarefa">
 {% endblock conteudo %}

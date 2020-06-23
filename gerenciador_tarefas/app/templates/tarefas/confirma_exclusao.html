@@ -10,7 +10,6 @@
             <h5 class="card-title">{{ tarefa.titulo }}</h5>
             <p class="card-text">{{ tarefa.descricao }}</p>
             <p class="card-date">{{ tarefa.data_expiracao }}</p>
-            <hr>
             <form method="POST">
                 {% csrf_token %}
                 <button class="btn btn-danger" type="submit">Remover</button>
